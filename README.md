@@ -1,8 +1,8 @@
-# 🔥 Prediksi Terjadinya Kebakaran Hutan Berdasarkan Faktor Cuaca dan Indeks Cuaca Kebakaran Menggunakan AdaBoost
+# Prediksi Terjadinya Kebakaran Hutan Berdasarkan Faktor Cuaca dan Indeks Cuaca Kebakaran Menggunakan AdaBoost
 
 ---
 
-## 1. 📌 Judul
+## 1. Judul
 
 **Prediksi Terjadinya Kebakaran Hutan Berdasarkan Faktor Cuaca dan Indeks Cuaca Kebakaran Menggunakan AdaBoost**
 
@@ -10,7 +10,7 @@ Proyek ini merupakan Tugas Besar mata kuliah Machine Learning yang membangun mod
 
 ---
 
-## 2. 📄 Deskripsi Proyek
+## 2. Deskripsi Proyek
 
 Kebakaran hutan merupakan bencana alam yang memberikan dampak serius terhadap ekosistem, kesehatan masyarakat, dan perekonomian. Dataset yang digunakan berasal dari Taman Alam Montesinho, Portugal, dan mencatat berbagai kondisi cuaca serta komponen Fire Weather Index (FWI) dari setiap kejadian kebakaran.
 
@@ -23,7 +23,7 @@ Model dibangun menggunakan algoritma **AdaBoost (Adaptive Boosting)** dengan bas
 
 ---
 
-## 3. 🎯 Tujuan
+## 3. Tujuan
 
 1. Membangun model klasifikasi biner untuk memprediksi terjadinya kebakaran hutan berdasarkan faktor cuaca dan indeks FWI
 2. Mengoptimalkan hyperparameter model AdaBoost secara otomatis menggunakan GridSearchCV
@@ -34,7 +34,7 @@ Model dibangun menggunakan algoritma **AdaBoost (Adaptive Boosting)** dengan bas
 
 ---
 
-## 4. 🗂️ Struktur Notebook
+## 4. Struktur Notebook
 
 Notebook `Prediksi_Kebakaran_Hutan_AdaBoost.ipynb` disusun dengan urutan sebagai berikut:
 
@@ -62,7 +62,7 @@ Notebook `Prediksi_Kebakaran_Hutan_AdaBoost.ipynb` disusun dengan urutan sebagai
 
 ---
 
-## 5. 📊 Dataset
+## 5. Dataset
 
 | Atribut | Keterangan |
 |---------|------------|
@@ -77,19 +77,19 @@ Notebook `Prediksi_Kebakaran_Hutan_AdaBoost.ipynb` disusun dengan urutan sebagai
 
 | Kolom | Tipe | Keterangan | Digunakan |
 |-------|------|------------|-----------|
-| `X` | Integer | Koordinat spasial sumbu X | ❌ Tidak |
-| `Y` | Integer | Koordinat spasial sumbu Y | ❌ Tidak |
-| `month` | String | Bulan kejadian | ❌ Tidak |
-| `day` | String | Hari kejadian | ❌ Tidak |
-| `FFMC` | Float | Fine Fuel Moisture Code (Indeks FWI) | ✅ Ya |
-| `DMC` | Float | Duff Moisture Code (Indeks FWI) | ✅ Ya |
-| `DC` | Float | Drought Code (Indeks FWI) | ✅ Ya |
-| `ISI` | Float | Initial Spread Index (Indeks FWI) | ✅ Ya |
-| `temp` | Float | Suhu udara (°C) | ✅ Ya |
-| `RH` | Integer | Kelembapan relatif (%) | ✅ Ya |
-| `wind` | Float | Kecepatan angin (km/h) | ✅ Ya |
-| `rain` | Float | Curah hujan (mm/m²) | ✅ Ya |
-| `area` | Float | Luas area terbakar (ha) — diubah jadi label biner | ✅ Target |
+| `X` | Integer | Koordinat spasial sumbu X | Tidak |
+| `Y` | Integer | Koordinat spasial sumbu Y | Tidak |
+| `month` | String | Bulan kejadian | Tidak |
+| `day` | String | Hari kejadian | Tidak |
+| `FFMC` | Float | Fine Fuel Moisture Code (Indeks FWI) | Ya |
+| `DMC` | Float | Duff Moisture Code (Indeks FWI) | Ya |
+| `DC` | Float | Drought Code (Indeks FWI) | Ya |
+| `ISI` | Float | Initial Spread Index (Indeks FWI) | Ya |
+| `temp` | Float | Suhu udara (°C) | Ya |
+| `RH` | Integer | Kelembapan relatif (%) | Ya |
+| `wind` | Float | Kecepatan angin (km/h) | Ya |
+| `rain` | Float | Curah hujan (mm/m²) | Ya |
+| `area` | Float | Luas area terbakar (ha) — diubah jadi label biner | Target |
 
 > **Catatan:** Kolom `X`, `Y`, `month`, dan `day` sengaja tidak digunakan karena tidak merepresentasikan faktor cuaca maupun kondisi fisik yang relevan dengan judul penelitian.
 
@@ -174,7 +174,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 ---
 
-## 8. 🧠 Arsitektur Model
+## 8. Arsitektur Model
 
 ### Algoritma Utama: AdaBoost (Adaptive Boosting)
 
@@ -201,7 +201,7 @@ SMOTE (Synthetic Minority Oversampling Technique) digunakan sebagai eksperimen t
 
 ---
 
-## 9. 🔧 Konfigurasi Training
+## 9. Konfigurasi Training
 
 ### GridSearchCV — Ruang Pencarian Hyperparameter
 
@@ -236,7 +236,7 @@ AdaBoostClassifier(
 
 ---
 
-## 10. 📈 Evaluasi
+## 10. Evaluasi
 
 ### Hasil Model Utama (AdaBoost + GridSearchCV + Feature Engineering)
 
@@ -277,7 +277,7 @@ AdaBoostClassifier(
 
 ---
 
-## 11. ▶️ Cara Menjalankan
+## 11. Cara Menjalankan
 
 ### Prasyarat
 
@@ -311,11 +311,11 @@ pip install pandas numpy matplotlib scikit-learn imbalanced-learn
    - Klik menu **Kernel → Restart & Run All**, atau
    - Jalankan satu per satu dengan **Shift + Enter**
 
-> ⚠️ **Penting:** File `forestfires.csv` harus berada di folder yang **sama** dengan file `.ipynb` agar perintah `pd.read_csv('forestfires.csv')` berhasil dijalankan.
+> **Penting:** File `forestfires.csv` harus berada di folder yang **sama** dengan file `.ipynb` agar perintah `pd.read_csv('forestfires.csv')` berhasil dijalankan.
 
 ---
 
-## 12. 📁 Struktur Folder
+## 12. Struktur Folder
 
 ```
 project/
@@ -327,7 +327,7 @@ project/
 
 ---
 
-## 13. ✅ Kesimpulan
+## 13. Kesimpulan
 
 1. **Model berhasil dibangun** — AdaBoost dengan GridSearchCV mampu mengklasifikasikan kondisi terjadinya kebakaran hutan berdasarkan 8 fitur cuaca dan indeks FWI, ditambah 3 fitur turunan hasil feature engineering.
 
@@ -343,7 +343,7 @@ project/
 
 ---
 
-## 14. 💡 Saran Pengembangan
+## 14. Saran Pengembangan
 
 1. **Perbanyak data** — Dataset hanya 517 sampel. Menambah data dari sumber lain atau tahun yang berbeda dapat meningkatkan kemampuan generalisasi model secara signifikan.
 
